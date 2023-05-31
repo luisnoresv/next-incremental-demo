@@ -1,4 +1,6 @@
-import { UserFromGithub, UserInformation } from '../models/User';
+import { Repository, RepositoryFromGithub } from '@/lib/models/Repository';
+
+import { UserFromGithub, UserInformation } from '@/lib/models/User';
 
 export function MapUserFromGithub(
 	userFromGithub: UserFromGithub
@@ -17,4 +19,22 @@ export function MapUserFromGithub(
 	};
 
 	return userMapped;
+}
+
+export function MapRepositoryFromGithub(
+	repositoryFromGithub: RepositoryFromGithub
+): Repository {
+	const repositoryMapped: Repository = {
+		id: repositoryFromGithub.id,
+		description: repositoryFromGithub.description || '',
+		name: repositoryFromGithub.name,
+		url: repositoryFromGithub.html_url,
+		isTemplate: repositoryFromGithub.is_template,
+		language: repositoryFromGithub.language || '',
+		visibility: repositoryFromGithub.visibility,
+		stargazersUrl: repositoryFromGithub.stargazers_url,
+		stargazersCount: repositoryFromGithub.stargazers_count,
+	};
+
+	return repositoryMapped;
 }
