@@ -1,13 +1,12 @@
 import 'server-only';
 
+import { GH_BASE_URL } from '@/lib/appConstants';
 import {
 	MapRepositoryFromGithub,
 	MapUserFromGithub,
 } from '@/lib/customMappers/mappers';
 import { Repository, RepositoryFromGithub } from '@/lib/models/Repository';
 import { UserFromGithub, UserInformation } from '@/lib/models/User';
-
-const GH_BASE_URL = 'https://api.github.com';
 
 export async function getUserInformatioFromGithub(
 	username: string
@@ -32,7 +31,9 @@ export async function getRepositoriesFromGithubByUsername(
 	username: string
 ): Promise<Repository[]> {
 	try {
-		const response = await fetch(`${GH_BASE_URL}/users/${username}/repos`);
+		const response = await fetch(`${GH_BASE_URL}/users/${username}/repos`, {
+			next: { revalidate: 600 },
+		});
 
 		if (!response.ok) {
 			throw new Error(

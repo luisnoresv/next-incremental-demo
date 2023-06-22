@@ -3,9 +3,6 @@ import UserCard from '@/components/about/UserCard';
 import { getUserInformatioFromGithub } from '@/services/githubApi';
 import { Suspense } from 'react';
 
-// * Revalidate every half an hour
-export const revalidate = 10;
-
 export default async function AboutPage() {
   const userInformation = await getUserInformatioFromGithub('luisnoresv');
 
