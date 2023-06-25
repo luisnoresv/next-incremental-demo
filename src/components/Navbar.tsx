@@ -10,7 +10,7 @@ const routes = [
     text: "Dogs"
   },
   {
-    href: "/",
+    href: "/todos",
     text: "API"
   },
   {

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Create a project with the latest version of Nextjs",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "title": "Investigate the new features on version 13+",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "title": "Create dynamic routes",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "title": "Create route handlers",
+    "completed": true
+  },
+  {
+    "id": 5,
+    "title": "Install NextAuth to handle Authentication with the new Nextjs structure",
+    "completed": false
+  }
+]
