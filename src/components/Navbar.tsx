@@ -24,7 +24,7 @@ export default function NavBar() {
     <header className='noise-container shadow-lg'>
       <nav aria-label="Primary"
         className="container flex h-20 items-center">
-        <Link className='italic text-4xl font-normal tracking-tight text-purple-500 dark:text-miami-pink' title='Home' href="/">
+        <Link className='ml-4 italic text-4xl font-normal tracking-tight text-purple-500 dark:text-miami-pink' title='Home' href="/">
           Book of dogs
         </Link>
         <div className='ml-16 hidden shrink flex-row items-center gap-16 font-inter lg:flex'>

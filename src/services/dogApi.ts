@@ -10,7 +10,7 @@ export async function fetchDogs(order: string, limit: number): Promise<Dog[]> {
 					'x-api-key': process.env.DOG_API_KEY || '',
 				},
 				next: {
-					revalidate: 100,
+					revalidate: 300,
 				},
 			}
 		);

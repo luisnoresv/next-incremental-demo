@@ -19,7 +19,7 @@ export default async function DogsLayout({ children }: {
         <aside className='w-1/4 p-8 bg-purple-200'>
           <DogsList dogs={dogs} />
         </aside>
-        <section className='w-3/4'>
+        <section className='w-3/4 flex justify-center'>
           {children}
         </section>
       </section>

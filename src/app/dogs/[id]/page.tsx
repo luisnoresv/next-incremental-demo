@@ -10,7 +10,10 @@ export default async function DogsDetailPage({ params }: { params: { id: string;
 
   return (
     <Suspense fallback={<div>Fetching dog detail information...</div>}>
-      <DogCard dog={dog} />;
+      <section className='justify-center'>
+        <h2 className='text-center text-3xl m-4 text-sky-500'>{dog.breeds[0].name}</h2>
+        <DogCard dog={dog} />
+      </section>
     </Suspense>
   );
 }
