@@ -12,9 +12,7 @@ export async function getUserInformatioFromGithub(
 	username: string
 ): Promise<UserInformation> {
 	try {
-		const response = await fetch(`${GH_BASE_URL}/users/${username}`, {
-			next: { revalidate: 0 },
-		});
+		const response = await fetch(`${GH_BASE_URL}/users/${username}`);
 
 		if (!response.ok) {
 			throw new Error('Failed to fetch the user information from Github');

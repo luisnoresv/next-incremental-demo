@@ -34,16 +34,28 @@ export default function UserCard({ userInformation }: Props) {
         </div>
         <ul className='list-none'>
           <li className='items-center text-sm pt-1 flex' aria-label={`Organization: ${userInformation?.company}`}>
-            <OrganizationIcon /> <span className='pl-2' title={userInformation?.company}>{userInformation?.company}</span>
+            <OrganizationIcon />
+            <span className='pl-2' title={userInformation?.company}>
+              {userInformation?.company}
+            </span>
           </li>
           <li className='items-center text-sm pt-1 flex' aria-label={`Organization: ${userInformation?.location}`}>
-            <LocationIcon /> <span className='pl-1' title={userInformation?.location}>{userInformation?.location}</span>
+            <LocationIcon />
+            <span className='pl-1' title={userInformation?.location}>
+              {userInformation?.location}
+            </span>
           </li>
           <li className='items-center text-sm pt-1 flex' aria-label={`Organization: ${userInformation?.blog}`}>
-            <ResourceLinkIcon /> <span className='pl-1' title={userInformation?.blog}>{userInformation?.blog}</span>
+            <ResourceLinkIcon />
+            <span className='pl-1' title={userInformation?.blog}>
+              {userInformation?.blog}
+            </span>
           </li>
           <li className='items-center text-sm pt-1 flex' aria-label={`Organization: ${userInformation?.twitterUsername}`}>
-            <TwitterIcon /> <span className='pl-0' title={userInformation?.twitterUsername}>{userInformation?.twitterUsername}</span>
+            <TwitterIcon />
+            <span className='pl-0' title={userInformation?.twitterUsername}>
+              {userInformation?.twitterUsername}
+            </span>
           </li>
         </ul>
       </article>
