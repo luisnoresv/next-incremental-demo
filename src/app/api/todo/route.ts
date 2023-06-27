@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server'
 
-import todos from '@/services/data/todos.json';
+import todos from '@/services/data/todos.json'
 
 export async function GET() {
-	return NextResponse.json(todos);
+  return NextResponse.json({ data: todos }, { status: 200 })
 }

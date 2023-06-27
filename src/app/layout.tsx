@@ -1,4 +1,6 @@
-import NavBar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import AuthProvider from '@/components/providers/AuthProvider';
 import { Inter, Open_Sans } from 'next/font/google';
 import './globals.css';
 
@@ -28,26 +30,17 @@ export default function RootLayout({
     <html lang="en" className={`${openSans.variable} ${inter.variable} overflow-x-hidden break-words`}>
       <body className={'font-opensans text-slate-800 selection:bg-purple-400 selection:text-black'}>
         <div className="isolate flex min-h-screen flex-col overflow-x-hidden">
-          <div
-            id="nav"
-            className="sticky top-0 z-20 max-h-screen"
-          >
-            <NavBar />
+          <AuthProvider>
+            <Header />
+            <main
+              id="main"
+              className="noise-container z-10 flex flex-1 flex-col"
+            >
+              {children}
+            </main>
             <hr className="border-gray-300 dark:border-gray-700" />
-          </div>
-
-          <main
-            id="main"
-            className="noise-container z-10 flex flex-1 flex-col"
-          >
-            {children}
-          </main>
-
-          <hr className="border-gray-300 dark:border-gray-700" />
-
-          <div className='noise-container'>
-            <footer>This would be the footer</footer>
-          </div>
+            <Footer />
+          </AuthProvider>
         </div>
       </body>
     </html>

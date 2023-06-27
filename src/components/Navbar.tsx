@@ -10,8 +10,8 @@ const routes = [
     text: "Dogs"
   },
   {
-    href: "/todos",
-    text: "Todos"
+    href: "/auth",
+    text: "Auth"
   },
   {
     href: "/",
