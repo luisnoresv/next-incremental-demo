@@ -10,10 +10,10 @@ export default async function TodosPage() {
   const todos = await fetchTodos();
   return (
     <section className='w-full flex flex-col items-center'>
-      <h2 className='text-2xl text-slate-600 mt-6 mb-6'>Fetching data example</h2>
+      <h2 className='text-2xl text-slate-600 mt-6 mb-6'>Route Handlers</h2>
       <p className="p-8 flex flex-col justify-center text-center rounded-xl border border-gray-300 bg-gradient-to-b from-purple-300">
         <span>
-          This data is fetch with <strong>Route Handlers</strong> from
+          This data is fetch from
         </span>
         <code className="font-mono font-bold">src/app/api/route.tsx</code>
       </p>

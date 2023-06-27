@@ -11,7 +11,7 @@ const routes = [
   },
   {
     href: "/todos",
-    text: "API"
+    text: "Todos"
   },
   {
     href: "/",
