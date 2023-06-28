@@ -14,9 +14,13 @@ const routes = [
     text: "Auth"
   },
   {
-    href: "/",
-    text: "Blog"
+    href: "/protected",
+    text: "Protected(server)"
   },
+  // {
+  //   href: "/blog",
+  //   text: "Blog"
+  // },
 ];
 
 export default function NavBar() {

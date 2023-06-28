@@ -2,8 +2,10 @@
 
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
+import { RightCircleArrow } from '../ui/icons';
 
 export default function SignInButton() {
+  // * we use the useSession hook to get the session on client side
   const { data: session } = useSession();
 
   return (
@@ -29,10 +31,13 @@ export default function SignInButton() {
       ) : (
         <article className='w-full mt-10 flex justify-center'>
           <section className='w-80'>
-            <p className='font-medium text-xl'>If you Sign In with your <strong>Github</strong> in to the app you will se some valuable information</p>
-            <button className='rounded-md border border-slate-300 bg-purple-400 px-3 py-1 text-sm font-medium' onClick={() => signIn()}>
-              Sign In
-            </button>
+            <p className='font-medium text-xl'>If you (Sign In) with your <strong>Github account</strong> in to the app, you will be able to see some valuable information</p>
+            <section className='flex mt-2'>
+              <RightCircleArrow classNames='w-10 h-10 text-purple-600 animate-bounce' />
+              <button className='rounded-md border border-slate-300 bg-purple-400 px-3 py-1 text-sm font-medium hover:bg-purple-700 hover:text-white' onClick={() => signIn()}>
+                Sign In
+              </button>
+            </section>
           </section>
         </article>
       )
