@@ -1,6 +1,6 @@
 
-import CodeBlock from '@/components/auth/CodeBlock';
 import SignInButton from '@/components/auth/SignInButton';
+import TodosList from '@/components/auth/TodoList';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../api/auth/[...nextauth]/route';
 
@@ -27,7 +27,7 @@ export default async function AuthPage() {
         <>
           <h2 className='text-2xl text-slate-600 mt-6 mb-6'>Route Handlers</h2>
           {/* @ts-expect-error Server Component */}
-          <CodeBlock title='List of Todos' path='todo' />
+          <TodosList />
         </>
       }
     </section>

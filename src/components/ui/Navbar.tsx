@@ -17,10 +17,10 @@ const routes = [
     href: "/protected",
     text: "Protected(server)"
   },
-  {
-    href: "/blog",
-    text: "Blog"
-  },
+  // {
+  //   href: "/blog",
+  //   text: "Blog"
+  // },
 ];
 
 export default function NavBar() {
