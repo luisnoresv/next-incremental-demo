@@ -1,13 +1,13 @@
-import CodeBlock from '@/components/ui/CodeBlock';
-import { SupabaseIcon } from '@/components/ui/icons';
-import { fetchUsersFromSupabase } from '@/services/supabase';
+
+import SupabaseDataSection from '@/components/ui/SupabaseDataSection';
+import { Supabase } from '@/services/supabase';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../api/auth/[...nextauth]/route';
 
 export default async function ProtectedServerPage() {
   const session = await getServerSession(authOptions);
 
-  const users = await fetchUsersFromSupabase();
+  const users = await Supabase.fetchUsers();
 
   return (
     <>
@@ -34,15 +34,7 @@ export default async function ProtectedServerPage() {
           </pre>
         </article>
       </section>
-      {users && users.length > 0 &&
-        <aside className='w-full mt-10 flex flex-col items-center'>
-          <div className='flex gap-1 mb-2'>
-            <h3 className='text-2xl font-bold'>Supabase</h3>
-            <SupabaseIcon />
-          </div>
-          <CodeBlock title='Users table Information' path='The users table' items={users} />
-        </aside>
-      }
+      <SupabaseDataSection data={users} tableName='Users table' />
     </>
   );
 }

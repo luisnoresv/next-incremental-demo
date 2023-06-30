@@ -4,23 +4,23 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import { createClient } from '@supabase/supabase-js';
 import { getServerSession } from 'next-auth';
 
-function createSupabaseClient(token: string | undefined) {
-	const supabase = createClient(
-		process.env.NEXT_PUBLIC_SUPABASE_URL ?? '',
-		process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? '',
-		{
-			global: {
-				headers: {
-					Authorization: `Bearer ${token}`,
+export class Supabase {
+	private static createSupabaseClient(token: string | undefined) {
+		const supabaseClient = createClient(
+			process.env.NEXT_PUBLIC_SUPABASE_URL ?? '',
+			process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? '',
+			{
+				global: {
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
 				},
-			},
-		}
-	);
-	return supabase;
-}
+			}
+		);
+		return supabaseClient;
+	}
 
-export async function fetchUsersFromSupabase() {
-	try {
+	private static async getSupabaseToken() {
 		const session = await getServerSession(authOptions);
 
 		let token: string | undefined;
@@ -29,16 +29,44 @@ export async function fetchUsersFromSupabase() {
 			const { supabaseAccessToken } = session!;
 			token = supabaseAccessToken;
 		}
-		const { data: users, error } = await createSupabaseClient(token)
-			.from('users')
-			.select('*');
 
-		if (error) {
-			console.error('Error from supabase', error);
+		return token;
+	}
+
+	static async fetchUsers() {
+		try {
+			const token = await this.getSupabaseToken();
+			const { data, error } = await this.createSupabaseClient(token)
+				.from('users')
+				.select('*');
+
+			if (error) {
+				throw new Error(`Error from supabase error: ${error}`);
+			}
+
+			return data;
+		} catch (error) {
+			console.error(error);
 		}
+	}
 
-		return users;
-	} catch (error) {
-		console.error('error', error);
+	/**
+	 * * RLS allows the SELECT method for unauthenticated users
+	 * @returns the postList stores on the post table
+	 */
+	static async fetchPost() {
+		try {
+			const { data, error } = await this.createSupabaseClient('')
+				.from('posts')
+				.select();
+
+			if (error) {
+				throw new Error(`Error from supabase error: ${error}`);
+			}
+
+			return data;
+		} catch (error) {
+			console.error(error);
+		}
 	}
 }
