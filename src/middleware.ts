@@ -16,5 +16,5 @@
 export { default } from 'next-auth/middleware';
 
 export const config = {
-	matcher: ['/protected', '/protected/:path*'],
+	matcher: ['/protected/:path*', '/blog/:path*'],
 };

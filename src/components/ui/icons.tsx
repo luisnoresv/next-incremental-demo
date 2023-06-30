@@ -43,7 +43,7 @@ export function StarGazersIcon({ height, width }: { height: string, width: strin
 
 export function RightCircleArrow({ classNames }: { classNames: string; }) {
   return <svg className={classNames} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+    <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
       <circle cx="12" cy="12" r="9" /><path d="m12 15l3-3m0 0l-3-3m3 3H9" />
     </g>
   </svg>;
