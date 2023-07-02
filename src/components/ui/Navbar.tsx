@@ -1,27 +1,34 @@
 import Link from 'next/link';
 
-const routes = [
-  {
-    href: "/about",
-    text: "About"
-  },
-  {
-    href: "/dogs",
-    text: "Dogs"
-  },
-  {
-    href: "/auth",
-    text: "Auth"
-  },
-  {
-    href: "/protected",
-    text: "Protected(server)"
-  },
-  {
-    href: "/posts",
-    text: "Post"
-  },
-];
+const routes: ({
+  href: string;
+  text: string;
+})[] = [
+    {
+      href: "/about",
+      text: "About"
+    },
+    {
+      href: "/dogs",
+      text: "Dogs"
+    },
+    {
+      href: "/auth",
+      text: "Auth"
+    },
+    {
+      href: "/protected",
+      text: "Protected(server)"
+    },
+    {
+      href: "/posts",
+      text: "Posts"
+    },
+    {
+      href: "/realtime",
+      text: 'Realtime Data'
+    }
+  ];
 
 export default function NavBar() {
   return (

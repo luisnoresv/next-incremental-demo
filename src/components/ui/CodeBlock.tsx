@@ -1,9 +1,8 @@
-import { Todo } from '@/lib/models/Api';
 
 interface Props {
   path: string;
   title: string;
-  items: Todo[] | any[];
+  items: any[];
 }
 
 export default function CodeBlock({ path, title, items }: Props) {

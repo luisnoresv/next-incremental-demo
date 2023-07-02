@@ -53,8 +53,8 @@ export function SupabaseIcon() {
   return <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 128 128">
     <defs>
       <linearGradient id="deviconSupabase0" x1="53.974" x2="94.163" y1="54.974" y2="71.829" gradientTransform="translate(29.387 60.096) scale(1.1436)" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#249361" />
-        <stop offset="1" stop-color="#3ecf8e" />
+        <stop offset="0" stopColor="#249361" />
+        <stop offset="1" stopColor="#3ecf8e" />
       </linearGradient>
       <linearGradient id="deviconSupabase1" x1="36.156" x2="54.484" y1="30.578" y2="65.081" gradientTransform="translate(29.387 60.096) scale(1.1436)" gradientUnits="userSpaceOnUse">
         <stop offset="0" /><stop offset="1" stopOpacity="0" />

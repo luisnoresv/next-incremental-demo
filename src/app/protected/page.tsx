@@ -1,13 +1,13 @@
 
 import SupabaseDataSection from '@/components/ui/SupabaseDataSection';
-import { Supabase } from '@/services/supabase';
+import { UsersService } from '@/services/supabase/usersService';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../api/auth/[...nextauth]/route';
 
 export default async function ProtectedServerPage() {
   const session = await getServerSession(authOptions);
 
-  const users = await Supabase.fetchUsers();
+  const users = await UsersService.fetchUsers();
 
   return (
     <>
@@ -34,7 +34,9 @@ export default async function ProtectedServerPage() {
           </pre>
         </article>
       </section>
-      <SupabaseDataSection data={users} tableName='Users table' />
+      {session &&
+        <SupabaseDataSection data={users} tableName='Users table' />
+      }
     </>
   );
 }
