@@ -1,4 +1,4 @@
-import { Todos } from '@/lib/models/SupabaseDomain';
+import { Todos } from '@/lib/models/supabase-domain';
 import { Supabase } from './supabase';
 
 export class TodosService {

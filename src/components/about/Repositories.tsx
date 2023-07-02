@@ -1,5 +1,5 @@
-import { getRepositoriesFromGithubByUsername } from '@/services/githubApi';
-import RepositoryCard from './RepositoryCard';
+import { getRepositoriesFromGithubByUsername } from '@/services/github-api';
+import RepositoryCard from './repository-card';
 
 interface Props {
   username: string;

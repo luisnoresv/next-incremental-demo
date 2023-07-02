@@ -1,5 +1,5 @@
-import RepositoriesSkeleton from '@/components/about/RepositoriesSkeleton';
-import UserSkeletonCard from '@/components/about/UserSkeletonCard';
+import RepositoriesSkeleton from '@/components/about/repositories-skeleton';
+import UserSkeletonCard from '@/components/about/user-skeleton-card';
 
 export default function AboutLoadingPage() {
   return <div className='animate-pulse container mr-auto ml-auto flex mt-10'>

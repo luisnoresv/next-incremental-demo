@@ -1,6 +1,6 @@
 
-import SupabaseDataSection from '@/components/ui/SupabaseDataSection';
-import { UsersService } from '@/services/supabase/usersService';
+import SupabaseDataSection from '@/components/ui/supabase-data-section';
+import { UsersService } from '@/services/supabase/users-service';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../api/auth/[...nextauth]/route';
 

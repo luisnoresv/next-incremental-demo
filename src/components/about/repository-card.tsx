@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { StarGazersIcon } from '@/components/ui/icons';
-import { Repository } from '@/lib/models/Repository';
+import { Repository } from '@/lib/models/repository';
 
 type Props = {
   repository: Repository;

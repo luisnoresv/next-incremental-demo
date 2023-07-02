@@ -1,9 +1,9 @@
 'use client';
 
-import { Posts } from '@/lib/models/SupabaseDomain';
+import { Posts } from '@/lib/models/supabase-domain';
 import { Supabase } from '@/services/supabase/supabase';
 import { useEffect, useState } from 'react';
-import SupabaseDataSection from './SupabaseDataSection';
+import SupabaseDataSection from '../ui/supabase-data-section';
 
 
 interface Props {

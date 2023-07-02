@@ -1,5 +1,5 @@
-import { DOG_API_BASE_URL } from '@/lib/appConstants';
-import { Dog } from '@/lib/models/Dogs';
+import { DOG_API_BASE_URL } from '@/lib/app-constants';
+import { Dog } from '@/lib/models/dogs';
 
 export async function fetchDogs(order: string, limit: number): Promise<Dog[]> {
 	try {

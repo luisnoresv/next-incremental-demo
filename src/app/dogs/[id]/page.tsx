@@ -1,6 +1,6 @@
-import DogCard from '@/components/dogs/DogCard';
-import { DOGS_QY_PER_REQUEST, FETCH_ORDER } from '@/lib/appConstants';
-import { fetchDogById, fetchDogs } from '@/services/dogApi';
+import DogCard from '@/components/dogs/dog-card';
+import { DOGS_QY_PER_REQUEST, FETCH_ORDER } from '@/lib/app-constants';
+import { fetchDogById, fetchDogs } from '@/services/dogs-api';
 import { Suspense } from 'react';
 import SkeletonDogCard from './loading';
 

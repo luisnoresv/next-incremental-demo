@@ -2,7 +2,7 @@ import {
   FollowersIcon, LocationIcon,
   OrganizationIcon, ResourceLinkIcon, TwitterIcon
 } from '@/components/ui/icons';
-import { UserInformation } from '@/lib/models/User';
+import { UserInformation } from '@/lib/models/user';
 import Image from 'next/image';
 
 

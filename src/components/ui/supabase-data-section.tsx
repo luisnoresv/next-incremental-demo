@@ -1,4 +1,4 @@
-import CodeBlock from './CodeBlock';
+import CodeBlock from './code-block';
 import { SupabaseIcon } from './icons';
 
 interface Props {

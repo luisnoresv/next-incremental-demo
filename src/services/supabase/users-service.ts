@@ -1,4 +1,4 @@
-import { Users } from '@/lib/models/SupabaseDomain';
+import { Users } from '@/lib/models/supabase-domain';
 import { Supabase } from './supabase';
 
 export class UsersService {

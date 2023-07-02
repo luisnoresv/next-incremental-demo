@@ -1,6 +1,6 @@
-import { Repository, RepositoryFromGithub } from '@/lib/models/Repository';
+import { Repository, RepositoryFromGithub } from '@/lib/models/repository';
 
-import { UserFromGithub, UserInformation } from '@/lib/models/User';
+import { UserFromGithub, UserInformation } from '@/lib/models/user';
 
 export function MapUserFromGithub(
 	userFromGithub: UserFromGithub

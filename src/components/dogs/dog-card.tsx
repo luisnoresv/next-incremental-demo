@@ -1,4 +1,4 @@
-import { Dog } from '@/lib/models/Dogs';
+import { Dog } from '@/lib/models/dogs';
 import Image from 'next/image';
 
 type Props = {

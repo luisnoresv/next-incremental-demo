@@ -1,6 +1,6 @@
-import DogsList from '@/components/dogs/DogsList';
-import { DOGS_QY_PER_REQUEST, FETCH_ORDER } from '@/lib/appConstants';
-import { fetchDogs } from '@/services/dogApi';
+import DogsList from '@/components/dogs/dogs-list';
+import { DOGS_QY_PER_REQUEST, FETCH_ORDER } from '@/lib/app-constants';
+import { fetchDogs } from '@/services/dogs-api';
 
 export const metadata = {
   title: 'Dogs detail page',

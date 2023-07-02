@@ -1,6 +1,6 @@
 import Repositories from '@/components/about/Repositories';
-import UserCard from '@/components/about/UserCard';
-import { getUserInformatioFromGithub } from '@/services/githubApi';
+import UserCard from '@/components/about/user-card';
+import { getUserInformatioFromGithub } from '@/services/github-api';
 import { Suspense } from 'react';
 
 export default async function AboutPage() {

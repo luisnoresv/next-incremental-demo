@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-import { TodosService } from '@/services/supabase/TodosService';
+import { TodosService } from '@/services/supabase/todos-service';
 
 // export async function GET() {
 // 	return NextResponse.json({ data: todos }, { status: 200 });

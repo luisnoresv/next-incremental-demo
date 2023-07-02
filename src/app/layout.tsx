@@ -1,6 +1,7 @@
-import AuthProvider from '@/components/providers/AuthProvider';
-import Footer from '@/components/ui/Footer';
-import Header from '@/components/ui/Header';
+import AuthProvider from '@/components/providers/auth-provider';
+
+import Footer from '@/components/ui/footer-section';
+import Header from '@/components/ui/header-nav';
 import { Inter, Open_Sans } from 'next/font/google';
 import './globals.css';
 

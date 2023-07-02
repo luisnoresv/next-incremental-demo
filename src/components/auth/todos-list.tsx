@@ -1,5 +1,5 @@
-import { Todos } from '@/lib/models/SupabaseDomain';
-import CodeBlock from '../ui/CodeBlock';
+import { Todos } from '@/lib/models/supabase-domain';
+import CodeBlock from '../ui/code-block';
 
 const BASE_API_URL = process.env.HOST_URL;
 

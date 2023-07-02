@@ -1,5 +1,5 @@
-import RealTimePosts from '@/components/ui/RealTimePosts';
-import { PostService } from '@/services/supabase/postsService';
+import RealTimePosts from '@/components/posts/real-time-posts';
+import { PostService } from '@/services/supabase/post-service';
 
 // * We need to revalidate to avoid hit cache
 export const revalidate = 0;

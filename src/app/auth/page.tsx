@@ -1,6 +1,6 @@
 
-import SignInButton from '@/components/auth/SignInButton';
-import TodosList from '@/components/auth/TodoList';
+import SignInButton from '@/components/auth/sign-in-button';
+import TodosList from '@/components/auth/todos-list';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../api/auth/[...nextauth]/route';
 

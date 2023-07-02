@@ -1,12 +1,12 @@
 import 'server-only';
 
-import { GH_BASE_URL } from '@/lib/appConstants';
+import { GH_BASE_URL } from '@/lib/app-constants';
 import {
 	MapRepositoryFromGithub,
 	MapUserFromGithub,
 } from '@/lib/customMappers/mappers';
-import { Repository, RepositoryFromGithub } from '@/lib/models/Repository';
-import { UserFromGithub, UserInformation } from '@/lib/models/User';
+import { Repository, RepositoryFromGithub } from '@/lib/models/repository';
+import { UserFromGithub, UserInformation } from '@/lib/models/user';
 
 export async function getUserInformatioFromGithub(
 	username: string
